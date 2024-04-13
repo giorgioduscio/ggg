@@ -1,0 +1,25 @@
+[
+    {
+        "name":"Linkin Park",
+        "URLimage":"https://cloud.radiofreccia.it/radiofreccia/News/Article/600xH/linkin-park-shinodanon-siamo-ancora-pronti-a-tornare-wide-site-bvqst.jpg",
+        "members":[
+            {"name":"Chester Bennington", "role":"Voce scream"},
+            {"name":"Mike Shinoda", "role":"Voce cross over, chitarrista, pianista"},
+            {"name":"Brad Dalson", "role":"Batterista"},
+            {"name":"Rob Bourton", "role":"Chitarrista"},
+            {"name":"Ms Hahn", "role":"Console"},
+            {"name":"Phoenix", "role":"Bassista"}
+        ]
+    },
+    {
+        "name":"Bring me the horizon",
+        "URLimage":"https://static.wikia.nocookie.net/rock/images/5/5a/Bmth.jpg/revision/latest?cb=20190827220024",
+        "members":[
+            {"name":"Oliver Sykes", "role":"Voce scream"},
+            {"name":"Jordan Fish", "role":"Pianista"},
+            {"name":"Matthew Nicholls", "role":"Batterista"},
+            {"name":"Lee Malia", "role":"Chitarrista"},
+            {"name":"Matt Kean", "role":"Bassista"}
+        ]
+    }
+]

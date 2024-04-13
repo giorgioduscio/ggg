@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display</title>
+        <link rel="stylesheet" href="/layout/AAA.css">
+    </head>
+    <body> <!-- todo -->
+        <header></header>
+        <section>
+            <div>
+                <h1>Titolo accattivante</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officia voluptate repellat nisi totam amet commodi illo, expedita iusto exercitationem laboriosam reiciendis nostrum, voluptatum consequatur error odio et quaerat minus.</p>
+            </div>
+            <div class="flexbox" id="autoGenerate"></div>
+            <div class="contrastBox">
+                <div>
+                    <div class="card" id="e0"></div>
+                    <div class="card" id="e1"></div>
+                    <div class="card" id="e2"></div>
+                </div>
+
+                <div>
+                    <div class="card" id="e3"></div>
+                    <div class="card" id="e4"></div>
+                    <div class="card" id="e5"></div>
+                </div>
+            </div>
+
+        </section>
+        <footer></footer>
+        
+    </body>
+</html>
+<script>    // optimize
+    const autoGenerate=document.querySelector('#autoGenerate')
+        for (let b = 0; b < 10; b++) {// elementi interni
+            autoGenerate.innerHTML+=`<div class="card" id="card${b}">card${b}</div>`;
+        }        
+
+</script>

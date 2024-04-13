@@ -1,0 +1,50 @@
+/* LAYOUT */
+*{ 
+    margin:0; 
+    padding: 5px;
+    outline: 0;
+    
+    transition:0.3s; 
+    font-size:100%;
+    --sfondo:#20202080; 
+    --tema:#00ff00; 
+    --larghezza:1000px;
+
+    background:var(--sfondo);
+    color:var(--tema); 
+}
+html,body{ padding: 0; }
+body>div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: top;
+}
+body#homePage>nav button#homePage,
+body#ordinations>nav button#ordinations,
+body#howToArray>nav button#howToArray
+{ color: #dadada; }
+
+#ordinationLayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+#ordinationLayout>div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+ /* TODO componenti */
+input{
+    margin: 5px;
+    background:#202020;
+    color: #dadada;
+    border: 1px solid;
+    border-radius: 10px;
+}
+button{
+    border: 1px solid;
+    border-radius: 10px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <title>howJSON</title>
+    </head>
+    <body>
+        <div id="generateBands"></div>
+    </body>
+</html>
+<script>
+    const generateBands=document.getElementById('generateBands')
+
+    function generateBandsFunction(arrayBands) {
+        console.log('json',arrayBands)
+
+        //CREA I VARI CAMPI
+        arrayBands.forEach(band => {
+            generateBands.innerHTML+=`
+                <h2>${band.name}</h2>
+                <ol class="row"></ol>
+            `;
+        });
+
+        //MOSTRA LE INFORMAZIONI DELLE BAND
+        const rows=document.querySelectorAll('#generateBands .row')
+        for (let a = 0; a < arrayBands.length; a++) {
+            for (let b = 0; b < arrayBands[a].members.length; b++) {
+                console.log( rows[a], arrayBands[a].members[b].name );
+                rows[a].innerHTML+=`<li>${arrayBands[a].members[b].name}</li>`;
+            }
+        }
+
+    }
+
+    fetch('bands.json')
+    .then(response=>response.json())
+    .then(json=>generateBandsFunction(json))
+</script>
