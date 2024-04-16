@@ -5,8 +5,8 @@ function ordinations() {
         <div id="ordinationLayout">
             <div class="ordination">
                 <h1>Ordinazioni</h1>
-                <input type="text" class="foodName" value="prugna"/>
-                <input type="number" class="foodPrice" value="1"/>
+                <input type="text" class="inputFoodName" value="prugna"/>
+                <input type="number" class="inputFoodPrice" value="1"/>
                 <button class="addCart">Aggiungi al carrello</button>
             </div>
 
@@ -19,7 +19,7 @@ function ordinations() {
 
             <div class="cronology">
                 <h1>Cronologia ordini</h1>
-                <div class="generateCronology"></div>
+                <ol class="generateCronology"></ol>
             </div>
         </div>
     `;
@@ -43,20 +43,34 @@ function ordinations() {
     showCart()
 
     // RIEMPI
-    const foodName=document.querySelector('.foodName')
-    const foodPrice=document.querySelector('.foodPrice')
+    const inputFoodName=document.querySelector('.inputFoodName')
+    const inputFoodPrice=document.querySelector('.inputFoodPrice')
     const addCart=document.querySelector('.addCart')
 
     addCart.addEventListener('click',function () {
         currentCart.push(
-            { name:foodName.value, price:foodPrice.value }
+            { name:inputFoodName.value, price:inputFoodPrice.value }
         )
         showCart()
     })
 
 
     // TODO CRONOLOGIA
-    const arrayCronology=[];
+    const arrayCronology=[
+        { 
+            tableSelected:'A384',
+            ordinations:[
+                { name:'arancie', price:3 },
+                { name:'carciofi', price:7 },
+            ],
+        },
+        { 
+            tableSelected:'Y745',
+            ordinations:[
+                { name:'mele', price:1 },
+            ],
+        }
+    ];
     // MOSTRA
     function showCronology() {
         const generateCronology=document.querySelector('.generateCronology');
@@ -65,13 +79,16 @@ function ordinations() {
         // TITOLO
         if (arrayCronology.length>0) {
             for (let a = 0; a < arrayCronology.length; a++) {
-                generateCronology.innerHTML+=`<p>Tavolo ${arrayCronology[a].tableSelected}</p><div></div>`
-
-                let cronologyOrdinations=document.querySelector(".generateCronology>div")
-                cronologyOrdinations.innerHTML="";
+                generateCronology.innerHTML+=`
+                    <li>Tavolo ${arrayCronology[a].tableSelected}</li>
+                    <ul></ul>
+                `;
+                
+                const cronologyOrders=document.querySelectorAll('.generateCronology>ul')
                 for (let b = 0; b < arrayCronology[a].ordinations.length; b++) {
-                    console.log('cronologyOrdinations',arrayCronology[a].ordinations[b]);
-                    cronologyOrdinations.innerHTML+=`<p>${arrayCronology[a].ordinations[b].price}€ ${arrayCronology[a].ordinations[b].name}</p>`;
+                    cronologyOrders[a].innerHTML+=`
+                        <li>${arrayCronology[a].ordinations[b].name} ${arrayCronology[a].ordinations[b].price}€</li>
+                    `;
                 }
             }
         }else{

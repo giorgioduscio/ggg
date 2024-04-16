@@ -39,6 +39,7 @@ body#howToArray>nav button#howToArray
  /* TODO componenti */
 input{
     margin: 5px;
+    max-width: 100px;
     background:#202020;
     color: #dadada;
     border: 1px solid;
@@ -47,4 +48,7 @@ input{
 button{
     border: 1px solid;
     border-radius: 10px;
+}
+ul,ol{
+    padding-left: 20px;
 }
