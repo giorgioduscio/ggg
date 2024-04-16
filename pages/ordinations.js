@@ -25,7 +25,7 @@ function ordinations() {
     `;
 
     // TODO CARRELLO
-    const currentCart=[];
+    let currentCart=[];
 
     // MOSTRA
     function showCart() {
@@ -56,21 +56,7 @@ function ordinations() {
 
 
     // TODO CRONOLOGIA
-    const arrayCronology=[
-        { 
-            tableSelected:'A384',
-            ordinations:[
-                { name:'arancie', price:3 },
-                { name:'carciofi', price:7 },
-            ],
-        },
-        { 
-            tableSelected:'Y745',
-            ordinations:[
-                { name:'mele', price:1 },
-            ],
-        }
-    ];
+    const arrayCronology=[];
     // MOSTRA
     function showCronology() {
         const generateCronology=document.querySelector('.generateCronology');
@@ -83,7 +69,7 @@ function ordinations() {
                     <li>Tavolo ${arrayCronology[a].tableSelected}</li>
                     <ul></ul>
                 `;
-                
+
                 const cronologyOrders=document.querySelectorAll('.generateCronology>ul')
                 for (let b = 0; b < arrayCronology[a].ordinations.length; b++) {
                     cronologyOrders[a].innerHTML+=`
@@ -102,12 +88,12 @@ function ordinations() {
     const tableID=document.querySelector('.tableID')
 
     buy.addEventListener('click',function () {
-        arrayCronology.push(
-            { 
-                tableSelected:tableID.value,
-                ordinations:currentCart,
-            }
-        )
+        arrayCronology.push({ 
+            tableSelected:tableID.value,
+            ordinations:currentCart,
+        })
+        // RIPRISTINA CARRELLO
+        currentCart=[]; showCart()
         showCronology()
     })
 
