@@ -10,7 +10,6 @@ function homePage() { router.innerHTML=`<h1>homepage</h1>`; }
 // pagina principale
 body.addEventListener('click',function (event) {
 
-    // se l'id indirizza in una pagina, cambia l'id del body
     let pagName=false; 
 
     if (event.target.id!='') {
@@ -31,9 +30,7 @@ body.addEventListener('click',function (event) {
                 break;
         }
 
-        if (pagName) {
-            body.id=event.target.id;
-            console.log(body.id);
-        }
+        // SE L'ID INDIRIZZA AD UNA PAGINA, CAMBIA L'ID DEL BODY
+        pagName? body.id=event.target.id :  '';
     }
 })
