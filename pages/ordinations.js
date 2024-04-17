@@ -1,6 +1,6 @@
 function ordinations() {
-    body.id='ordinations';
 
+    // optimize INNERHTML
     router.innerHTML=`
         <div id="ordinationLayout">
             <div class="ordination">

@@ -1,5 +1,6 @@
-// optimize INNERHTML                           -
 function howToArray() {
+
+    // optimize INNERHTML
     router.innerHTML=`
         <header>
             <h1>Lista</h1>
@@ -96,7 +97,7 @@ function howToArray() {
     // OPTIMIZE CANCELLA ELEMENTO
     // INDICE PULSANTI = INDICE ARRAY
     const cancButton=document.querySelectorAll('#listInnetHtml button.canc')
-    console.log('cancButton',cancButton);
+    // console.log('cancButton',cancButton);
 
     listInnetHtml.addEventListener('click',function (event) { // fix
         console.log('event',event.target)
