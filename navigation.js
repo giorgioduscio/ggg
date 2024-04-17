@@ -3,27 +3,37 @@ const body=document.body;
 const router=document.querySelector('router');
 
 // TODO PAGINE                                  -
-function homePage() {
-    body.id='homePage';
-    router.innerHTML=`<h1>homepage</h1>`;
-} 
-ordinations()
+function homePage() { router.innerHTML=`<h1>homepage</h1>`; } 
+
 
 // TODO ROUTING                                 -
+// pagina principale
 body.addEventListener('click',function (event) {
 
+    // se l'id indirizza in una pagina, cambia l'id del body
+    let pagName=false; 
+
     if (event.target.id!='') {
+        switch (event.target.id) {
+            case 'homePage':
+                homePage();
+                pagName=true;
+                break;
+
+            case 'ordinations':
+                ordinations()
+                pagName=true;
+                break;
         
-        if (event.target.id=='homePage') {
-            homePage()
+            case 'howToArray':
+                howToArray()
+                pagName=true;
+                break;
         }
-        if (event.target.id=='ordinations') {
-            ordinations()
+
+        if (pagName) {
+            body.id=event.target.id;
+            console.log(body.id);
         }
-        if (event.target.id=='howToArray') {
-            howToArray()
-        }
-        console.log(body.id,event.target.id);
-        body.id=event.target.id
     }
 })
