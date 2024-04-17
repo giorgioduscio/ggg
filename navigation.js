@@ -29,6 +29,6 @@ body.addEventListener('click',function (event) {
         }
 
         // SE L'ID INDIRIZZA AD UNA PAGINA, CAMBIA L'ID DEL BODY
-        pagName? body.id=event.target.id :  '';
+        if(pagName) body.id = event.target.id;
     }
 })
