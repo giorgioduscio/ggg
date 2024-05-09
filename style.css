@@ -18,9 +18,7 @@ html,body{
     padding: 0; 
 }
 body>div{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    
 }
     aside{
         width: 30%;
