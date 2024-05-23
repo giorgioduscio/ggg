@@ -1,4 +1,4 @@
-import { navbar } from "./navbar.js";
+import { navbar } from "./navbar.js"; 
 
 import { howAsync } from "./pages/howAsync.js";
 import { howDomManip } from "./pages/howDomManip.js";
@@ -6,35 +6,18 @@ import { howManageDates } from "./pages/howMenageDates.js";
 import { howRename } from "./pages/howRename.js";
 import { howToArray } from "./pages/howToArray.js";
 import { ordinations } from "./pages/ordinations.js";
+import { catchJSON } from "./pages/showJson.js";
 
-//TODO ROUTER
-function selectPage() {
-    // CREA NAVBAR
-    // PRENDI UN DATO
-    
-    // IL DATO RITORNA
-    return 0
-}
 
 function router(indexPage) {
     switch (indexPage) {
-        case 0:
-            return howRename()
-    
-        case 1:
-            return howToArray()
-    
-        case 2:
-            return ordinations()
-    
-        case 3:
-            return howManageDates()
-    
-        case 4:
-            return howDomManip()
-    
-        case 5:
-            return howAsync()
+        case 0: return howRename()
+        case 1: return howToArray()
+        case 2: return ordinations()
+        case 3: return howManageDates()
+        case 4: return howDomManip()
+        case 5: return howAsync()
+        case 6: return catchJSON()
     
         default:
             return `
@@ -44,23 +27,17 @@ function router(indexPage) {
     }
 }
 
-document.getElementById('router').innerHTML= router( selectPage() );
+
+//COMPONENTI HTML
+const switchPage= document.querySelector('#switchPage')
+const page= document.querySelector('#page')
 
 
-// IMPORTA API
-function  showJSON(json) {
-    console.log(json);
+switchPage.addEventListener('change', ()=>{
+    var indexPage= Number(switchPage.value)
+    page.innerHTML= router( indexPage ) ;
+})
 
-    return `<div>
-        ${json.map(el=>{
-            return `<p>${el.name}</p> `
-        }).join('')}
-    </div>`;
-}
 
-function catchJSON() {
-    fetch('./jsonEse/bands.json')
-    .then(response=>response.json())
-    .then((json)=> console.log( showJSON(json)) )
-}
-catchJSON()
+var indexPage=switchPage.value=0
+page.innerHTML= router( indexPage ) ;
