@@ -17,22 +17,11 @@ html,body{
     min-height: 100vh;
     padding: 0; 
 }
-body>div{
-    
-}
     aside{
         width: 30%;
         display: flex;
         flex-direction: column;
     }
-    router{
-        width: 100%;
-    }
-
-body#homePage>nav button#homePage,
-body#ordinations>nav button#ordinations,
-body#howToArray>nav button#howToArray
-{ color: #dadada; }
 
 
  /* TODO ORDINATIONPAGE */
