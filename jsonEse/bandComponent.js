@@ -21,14 +21,14 @@ export function bandComponent(params) {
         })
     
     
-    let URL='./bands.json';
-    let request=new XMLHttpRequest()
-    request.open('GET',URL)
-    request.response='json';
-    request.send();
+    // let URL='./bands.json';
+    // let request=new XMLHttpRequest()
+    // request.open('GET',URL)
+    // request.response='json';
+    // request.send();
     
-    request.onload= function(){
-        const json= request.response;
-        console.log('jsonXML', json);
-    }
+    // request.onload= function(){
+    //     const json= request.response;
+    //     console.log('jsonXML', json);
+    // }
 }

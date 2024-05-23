@@ -67,3 +67,8 @@ ul,ol{
 a{
     cursor: pointer;
 }
+
+ /* TODO bands */
+.bandComponent td{
+    background: black;
+}

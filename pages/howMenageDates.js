@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>howMenageDates</title>
-    </head>
-    <body>
+
+export function howManageDates(){
+    
+    return `
         <div class="output">Clicca</div>
         <button class="clock">---</button>
-    </body>
-</html>
-<script>
+    `;
+    
     // Mer 10/01/2022 13:45:09
     const formatDate={ // mercoledi 19/12/2022
             //DATA
@@ -26,18 +20,19 @@
             second:"2-digit",
             hour12:false, // analogico||digitale
         }
-
+    
     console.log(`Data attuale: ${new Date().toLocaleString(undefined,formatDate)}`);
-
+    
     // TOSTRING
     const output=document.querySelector('.output');
     output.addEventListener('click',function () {
         output.innerText=new Date().toLocaleString(undefined,formatDate);
     })
-
+    
     //OROLOGIO
     const clock=document.querySelector('.clock')
     setInterval(() => {
         clock.innerText=new Date().toLocaleString(undefined,formatDate)
     }, 1000);
-</script>
+}
+

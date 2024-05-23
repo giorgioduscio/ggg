@@ -1,7 +1,7 @@
-function howToArray() {
+export function howToArray() {
 
     // optimize INNERHTML
-    router.innerHTML=`
+    return `
         <header>
             <h1>Lista</h1>
             <input type="text" id="input">

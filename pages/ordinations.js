@@ -1,7 +1,7 @@
-function ordinations() {
+export function ordinations() {
 
     // optimize INNERHTML
-    router.innerHTML=`
+    return `
         <div id="ordinationLayout">
             <div class="ordination">
                 <h1>Ordinazioni</h1>
