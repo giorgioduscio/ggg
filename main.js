@@ -1,5 +1,3 @@
-import { navbar } from "./navbar.js"; 
-
 import { howAsync } from "./pages/howAsync.js";
 import { howDomManip } from "./pages/howDomManip.js";
 import { howManageDates } from "./pages/howMenageDates.js";
