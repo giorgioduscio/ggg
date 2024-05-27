@@ -25,17 +25,15 @@ function router(indexPage) {
     }
 }
 
-
-//COMPONENTI HTML
-const switchPage= document.querySelector('#switchPage')
+// TODO COMPONENTI HTML
+const switchInput= document.querySelector('#switchInput')
 const page= document.querySelector('#page')
 
-
-switchPage.addEventListener('change', ()=>{
-    var indexPage= Number(switchPage.value)
-    page.innerHTML= router( indexPage ) ;
-})
-
-
-var indexPage=switchPage.value=0
-page.innerHTML= router( indexPage ) ;
+    // QUANDO RICARICHI LA PAGINA
+    function aaa(valore) {
+        var indexPage= valore? switchInput.value=0 :Number(switchInput.value)
+        page.innerHTML= router( indexPage );
+    }
+    aaa(true)
+    // QUANDO CAMBI IL VALORE DEL MENU'
+    switchInput.addEventListener('change', ()=> aaa(false))
