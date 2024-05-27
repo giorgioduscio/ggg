@@ -1,42 +1,57 @@
 /* LAYOUT */
 *{ 
     margin:0; 
-    padding: 5px;
+    padding: 10px;
     outline: 0;
     
     transition:0.3s; 
     font-size:2.5vh;
-    --sfondo:#20202080; 
+    font-family: cursive;
+
+    --c1:#000; 
+    --c2:#444; 
+    --c3:#888; 
+    --c4:#ccc; 
+    --c5:#fff; 
     --tema:#00ff00; 
 
-    background:var(--sfondo);
-    color:var(--tema); 
+    color:var(--c1); 
 }
 html,body{ 
-    min-height: 100vh;
     padding: 0; 
+    background:var(--c1);
 }
-nav{
+#fixed{
+    padding:10px 0;
+
+    position: fixed; top: 0; width: 100%;
+
     display: flex;
     justify-content: space-between;
 }
+    #fixed>nav{
+        margin:0 10px;
+        padding: 0 20px;
+        width: 100%;
+        background: linear-gradient(30deg, var(--c2), var(--c3));
+        border-radius: 20px;
+    }
 
+#page{
+    padding: 100px 0px;
 
- /* TODO ORDINATIONPAGE */
-#ordinationLayout{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
+    background-image: url(https://img.freepik.com/vettori-gratuito/sfondo-di-carta-a-righe-blu-disegnato-a-mano_23-2151157572.jpg?t=st=1716795357~exp=1716798957~hmac=47fb254f2773c249e265ac9def705d42ddd1935fa42222b70636e414b4328c58&w=996);
+    background-position:center,center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
 }
-#ordinationLayout>div{
-    display: flex;
-    flex-direction: column;
-}
+
 
 
  /* TODO componenti */
-
-h1{ font-size: 6vh; }
+ 
+ h1{ font-size: 6vh; }
 h2{ font-size: 5vh; }
 h3{ font-size: 4vh; }
 h4{ font-size: 3vh; }
@@ -64,7 +79,18 @@ a{
     cursor: pointer;
 }
 
- /* TODO bands */
+/* TODO bands */
 .bandComponent td{
     background: black;
+}
+
+ /* TODO ORDINATIONPAGE */
+#ordinationLayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+#ordinationLayout>div{
+    display: flex;
+    flex-direction: column;
 }
