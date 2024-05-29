@@ -12,10 +12,9 @@ export default function navbar() {
 
     // PRESSIONE SUI PULSANTI
     var result='';
-    function handleClick(e) {
+    navbarVar.addEventListener('click', function (e) {
         result= e.target;
         console.log("event", e.target);
         navbarVar.className= result
-    }
-    navbarVar.addEventListener('click', handleClick)
+    })
 }

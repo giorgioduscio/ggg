@@ -73,10 +73,15 @@ input{
 }
 button{
     padding: 10px;
-    border: 1px solid;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    border: 0;
 }
+button:hover{
+    background: var(--c5);
+}
+
+
 ul,ol{
     padding-left: 20px;
 }
