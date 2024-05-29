@@ -1,14 +1,12 @@
+import pages from './pages.js';
+
 export default function navbar() {
     const navbarVar= document.querySelector("#navbar")
     navbarVar.innerHTML=`
         <span>
-            <button id="primo">Pulsante</button>
-            <button id="secondo">Pulsante</button>
-            <button id="terzo">Pulsante</button>
-        </span>
-        <span>
-            <button id="quarto">Pulsante</button>
-            <button id="quinto">Pulsante</button>
+        ${pages.map(el=>{
+            return `<button id=${el.path}>${el.path}</button>`
+        }).join('')}
         </span>
     `;
 
@@ -16,8 +14,8 @@ export default function navbar() {
     var result='';
     function handleClick(e) {
         result= e.target;
-        console.log("event", e.target.id);
-        navbarVar.className= result.id
+        console.log("event", e.target);
+        navbarVar.className= result
     }
     navbarVar.addEventListener('click', handleClick)
 }

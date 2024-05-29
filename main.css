@@ -13,18 +13,38 @@
     --c3:#888; 
     --c4:#ccc; 
     --c5:#fff; 
-    --tema:#00ff00; 
+    --st:#50505050; 
 
     color:var(--c1); 
 }
 html,body{ 
     padding: 0; 
+    margin: 0;
     background:var(--c1);
 }
-
 #page{
-    padding: 100px 0px;
+    min-height: 100vh;
+    padding: 0;
+}
 
+#navbar{
+    padding:5px 10px;
+    position: sticky; top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--c3);
+}
+    #navbar>*{
+        padding: 0;
+
+        display: flex;
+        gap: 10px;
+    }
+
+#content{
     background-image: url(https://img.freepik.com/vettori-gratuito/sfondo-di-carta-a-righe-blu-disegnato-a-mano_23-2151157572.jpg?t=st=1716795357~exp=1716798957~hmac=47fb254f2773c249e265ac9def705d42ddd1935fa42222b70636e414b4328c58&w=996);
     background-position:center,center;
     background-repeat: no-repeat;
