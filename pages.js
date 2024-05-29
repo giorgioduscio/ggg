@@ -14,6 +14,6 @@ const pages= [
     { path:'howToArray', element: howToArray() },
     { path:'ordinations', element: ordinations() },
     { path:'howJson', element: howJson() },
- ]
+]
 
 export default pages

@@ -10,7 +10,15 @@ navbar()
 const navbarVar= document.querySelector("#navbar")
 navbarVar.addEventListener("click", (e)=>{
     navbarVar.className= e.target.id
+    // CAMBIO PAGINA
+    show( navbarVar.className )
 })
+
 // VISUALIZZAZIONE
 import pages from "./pages.js";
-console.log('pagina', pages[0])
+function show(correntPage) {
+    for (let i = 0; i < pages.length; i++){
+        if (correntPage== pages[i].path) console.log("pagina", pages[i].path);
+    }
+}
+show("howAsync")
