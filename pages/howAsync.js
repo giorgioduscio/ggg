@@ -1,6 +1,11 @@
 export function howAsync() {
     
-    return `
+    console.log(
+        document.querySelector("#content")
+
+    );
+/*    
+    .innerHTML=`
         <section>
             <article>
                 <p>HHH</p>
@@ -12,6 +17,7 @@ export function howAsync() {
         </section>
     `;
     
+
     // todo Mostra
     const array=document.querySelectorAll('p');  
     function mostra(valore,index) { 
@@ -72,6 +78,7 @@ export function howAsync() {
     pulsante.addEventListener('click',()=>{
         output();
     })
+*/
 }
 
 

@@ -6,5 +6,11 @@ document.getElementById("page").innerHTML=`
 import navbar from "./navbar.js";
 navbar()
 
+// PRESSIONE SUI PULSANTI
+const navbarVar= document.querySelector("#navbar")
+navbarVar.addEventListener("click", (e)=>{
+    navbarVar.className= e.target.id
+})
+// VISUALIZZAZIONE
 import pages from "./pages.js";
-console.log( pages );
+console.log('pagina', pages[0])
