@@ -10,7 +10,7 @@ function  showJSON(json) {
     </div>`;
 }
 
-export function catchJSON() {
+export function howJson() {
     fetch('./jsonEse/bands.json')
     .then(response=>response.json())
     .then((json)=> { 
