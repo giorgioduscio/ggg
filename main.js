@@ -5,3 +5,6 @@ document.getElementById("page").innerHTML=`
 
 import navbar from "./navbar.js";
 navbar()
+
+import pages from "./pages.js";
+console.log( pages );
