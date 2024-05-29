@@ -3,18 +3,18 @@ document.getElementById("page").innerHTML=`
     <div id="content"></div>
 `;
 
+// NAVBAR
 import navbar from "./navbar.js";
 navbar()
 
 // PRESSIONE SUI PULSANTI
 const navbarVar= document.querySelector("#navbar")
 navbarVar.addEventListener("click", (e)=>{
-    navbarVar.className= e.target.id
-    // CAMBIO PAGINA
-    show( navbarVar.className )
+    //fix CAMBIO PAGINA IN BASE AL VALORE DEL PULSANTE PREMUTO
+    show( e.target.id ) 
 })
 
-// VISUALIZZAZIONE
+// fix VISUALIZZAZIONE
 import pages from "./pages.js";
 function show(correntPage) {
     for (let i = 0; i < pages.length; i++){

@@ -45,6 +45,8 @@ html,body{
     }
 
 #content{
+    min-height: 100vh;
+    
     background-image: url(https://img.freepik.com/vettori-gratuito/sfondo-di-carta-a-righe-blu-disegnato-a-mano_23-2151157572.jpg?t=st=1716795357~exp=1716798957~hmac=47fb254f2773c249e265ac9def705d42ddd1935fa42222b70636e414b4328c58&w=996);
     background-position:center,center;
     background-repeat: no-repeat;
