@@ -18,7 +18,14 @@ navbarVar.addEventListener("click", (e)=>{
 import pages from "./pages.js";
 function show(correntPage) {
     for (let i = 0; i < pages.length; i++){
+        // SE L'INPUT DELLA FUNZIONE E' UGUALE AL NOME DELLA PAGINA
         if (correntPage== pages[i].path) console.log("pagina", pages[i].path);
     }
 }
-show("howAsync")
+// TODO PAGINA PRINCIPALE
+show("howAsync") 
+
+
+
+import { mainArray } from "./datas/products.js";
+console.log('mainArray', mainArray);
